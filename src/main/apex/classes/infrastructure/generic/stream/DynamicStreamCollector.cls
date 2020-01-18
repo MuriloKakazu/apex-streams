@@ -15,10 +15,6 @@ public class DynamicStreamCollector {
     } 
 
     public List<Object> asList(Type listType, Type elementType) {
-        return (List<Object>) DynamicCollectionMarshaller.marshalToList(asList(), listType, elementType);
-    }
-
-    public Set<Object> asSet(Type setType, Type elementType) {
-        return (Set<Object>) DynamicCollectionMarshaller.marshalToSet(asSet(), setType, elementType);
+        return DynamicCollectionMarshaller.marshalToList(asList(), listType, elementType);
     }
 }

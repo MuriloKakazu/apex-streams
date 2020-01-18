@@ -10,14 +10,4 @@ public class DynamicCollectionMarshaller {
         return marshalled;
     }
 
-    public static Set<Object> marshalToSet(Set<Dynamic> dynamicObjs, Type resultingSetType, Type setElementType) {
-        Set<Object> marshalled = (Set<Object>) resultingSetType.newInstance();
-
-        for (Dynamic dynamic : dynamicObjs) {
-            marshalled.add(dynamic.marshal(setElementType));
-        }
-        
-        return marshalled;
-    }
-
 }
