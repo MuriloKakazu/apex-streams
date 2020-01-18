@@ -1,5 +1,6 @@
 @IsTest
 public class DynamicCollectionMarshallerTest {
+    
     private class Person {
         public String name; 
         public Integer age;
@@ -17,7 +18,7 @@ public class DynamicCollectionMarshallerTest {
             new Dynamic(new Person('Gonzales', 41))
         };
 
-        List<Person> people = (List<Person>) DynamicCollectionMarshaller.marshalToList(dynamicList, List<Person>.class, Person.class);
+        List<Person> people = (List<Person>) DynamicCollectionMarshaller.marshalToList(dynamicList, Person.class);
         System.assertEquals(2, people.size());
 
         Person firstPerson = people.get(0);
