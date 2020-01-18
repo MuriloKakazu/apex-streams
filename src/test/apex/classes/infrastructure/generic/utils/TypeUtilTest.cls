@@ -9,7 +9,7 @@ public class TypeUtilTest {
     }
 
     @IsTest
-    static void shouldGetListType_WhenSubclassElementType() {
+    static void shouldGetListType_WhenSubclassOrPrivateElementType() {
         System.assertEquals(List<Person>.class, TypeUtil.getListTypeOf(Person.class));
     }
 
