@@ -97,7 +97,7 @@ public class ObjectComparer {
 	}
 
     private static Comparison compareObjects(Object a, Object b) {
-        if (a == b) {
+        if (a === b) {
 			return Comparison.EQUALS;
 		} else {
 			return Comparison.NOT_EQUALS;
